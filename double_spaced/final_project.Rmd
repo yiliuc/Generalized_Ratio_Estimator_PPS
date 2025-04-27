@@ -50,9 +50,10 @@ linestretch: 2
 \newpage
 \pagenumbering{arabic}
 ```{r, echo=FALSE}
-source("./codes/bootstrap.R")
-source("./codes/jackknife.R")
-source("./codes/linearization.R")
+library(here)
+source("../codes/bootstrap.R")
+source("../codes/jackknife.R")
+source("../codes/linearization.R")
 ```
 
 # Introduction

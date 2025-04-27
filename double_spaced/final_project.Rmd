@@ -8,6 +8,7 @@ geometry: margin=1in
 fontsize: 12pt
 bibliography: references.bib
 csl: apa.csl
+linestretch: 2
 ---
 
 \begin{titlepage}
@@ -49,9 +50,9 @@ csl: apa.csl
 \newpage
 \pagenumbering{arabic}
 ```{r, echo=FALSE}
-source("codes/bootstrap.R")
-source("codes/jackknife.R")
-source("codes/linearization.R")
+source("./codes/bootstrap.R")
+source("./codes/jackknife.R")
+source("./codes/linearization.R")
 ```
 
 # Introduction
@@ -322,10 +323,10 @@ y_i=1+2x_i+2.5z_i+\varepsilon_i
 $$ 
 where $\varepsilon_i$ is an independent error term drawn from a standard normal distribution, $\varepsilon_i\sim\mathcal{N}(0,1)$. In addition, the population size is set to $N=5000$, and the sample size $n=500$. The R codes for generating the population data can be found at Appendi A.6.1.
 ```{r, echo=FALSE}
-pdata <- read.csv("data/pdata.csv")
-sdata_syspps <- read.csv("data/sdata_syspps.csv")
-sdata_poisson <- read.csv("data/sdata_poisson.csv")
-sdata_wrpps <- read.csv("data/sdata_wrpps.csv")
+pdata <- read.csv("./data/pdata.csv")
+sdata_syspps <- read.csv("./data/sdata_syspps.csv")
+sdata_poisson <- read.csv("./data/sdata_poisson.csv")
+sdata_wrpps <- read.csv("./data/sdata_wrpps.csv")
 
 library(knitr)
 

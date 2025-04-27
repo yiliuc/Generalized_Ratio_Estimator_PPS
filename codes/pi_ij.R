@@ -3,7 +3,7 @@ piij <- function(x, s) {
   n <- length(s)
   p <- matrix(0, n, n)
   
-  for (k in 1:1000000) {
+  for (k in 1:10000) {
     ss <- syspps(x, n)
     
     for (i in 1:(n - 1)) {
@@ -13,9 +13,11 @@ piij <- function(x, s) {
         }
       }
     }
+    if (k %% 1000 == 0)
+      message(" iterations completed: ", k, "/", B)
   }
   
-  p <- (p + t(p)) / 1000000
+  p <- (p + t(p)) / 10000
   return(p)
 }
 
